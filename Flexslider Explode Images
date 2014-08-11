@@ -1,0 +1,16 @@
+<div id="slider" class="flexslider">
+    <ul class="slides">
+		<?php
+
+		$string = get_field( 'slider' );
+		$split = explode ( '|', $string );
+
+		$split = array_reverse($split);
+
+		foreach($split as $img){
+		echo "<li><img src='{$img}' /></li>";
+		}
+
+		?>
+	</ul>
+</div>
